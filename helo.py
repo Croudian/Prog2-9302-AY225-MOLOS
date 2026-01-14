@@ -1,0 +1,1 @@
+print("walang late next week")
