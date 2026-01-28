@@ -170,3 +170,15 @@ th {
     color: white;
 }
 
+/* Fix list bullets for remarks inside modal */
+.modal-content ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px; /* show bullets */
+}
+
+.modal-content ul li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+

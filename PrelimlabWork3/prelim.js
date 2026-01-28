@@ -30,7 +30,7 @@ calculateBtn.addEventListener('click', () => {
     }
 
     const labAvg = (lab1 + lab2 + lab3) / 3;
-    const classStanding = (attendance * 0) + (labAvg * 0.6);
+    const classStanding = (attendance * 0.4) + (labAvg * 0.6); // Corrected weight
     const requiredForPass = (75 - (classStanding * 0.7)) / 0.3;
     const requiredForExcellent = (100 - (classStanding * 0.7)) / 0.3;
 
@@ -56,15 +56,23 @@ calculateBtn.addEventListener('click', () => {
                 <td>${requiredForExcellent > 100 ? "Not achievable" : requiredForExcellent < 0 ? "0.00" : requiredForExcellent.toFixed(2)}</td>
             </tr>
         </table>
+
+        <h3>Remarks:</h3>
+        <ul>
+            ${requiredForPass > 100 ? '<li>It is impossible to pass (75) with the current Class Standing.</li>' : ''}
+            ${requiredForExcellent > 100 ? '<li>It is impossible to achieve excellent (100) with the current Class Standing.</li>' : ''}
+            ${requiredForPass >= 0 && requiredForPass <= 100 ? `<li>To pass (75), you need at least ${requiredForPass.toFixed(2)} in the Prelim Exam.</li>` : ''}
+            ${requiredForExcellent >= 0 && requiredForExcellent <= 100 ? `<li>To achieve excellent (100), you need at least ${requiredForExcellent.toFixed(2)} in the Prelim Exam.</li>` : ''}
+        </ul>
     `;
 
-    modal.style.display = "block";
+    modal.style.display = "flex";
 });
 
 // Close modal
 closeBtn.onclick = () => modal.style.display = "none";
 
-// Clear
+// Clear inputs and modal
 clearBtn.onclick = () => {
     attendanceInput.value = "";
     lab1Input.value = "";
