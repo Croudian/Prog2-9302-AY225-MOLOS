@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: #ffffff;
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+label {
+    margin-top: 12px;
+    display: block;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#calculateBtn {
+    background: #2980b9;
+    color: #fff;
+}
+
+#calculateBtn:hover {
+    background: #1f6391;
+}
+
+.clear-btn {
+    background: #bdc3c7;
+    color: #2c3e50;
+}
+
+.clear-btn:hover {
+    background: #a6acaf;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 25px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.modal-content p {
+    margin-bottom: 8px;
+}
+
+#closeModal {
+    margin-top: 15px;
+    width: 100%;
+    background: #2980b9;
+    color: white;
+}
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* Modal Box */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 550px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.clear-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.clear-btn:hover {
+    background-color: #a93226;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+td, th {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #2980b9;
+    color: white;
+}
+

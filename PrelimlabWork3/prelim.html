@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prelim Grade Calculator</title>
+    <link rel="stylesheet" href="prelim.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Prelim Grade Calculator</h1>
+
+    <label>Attendance Score (0–100)</label>
+    <input type="number" id="attendance" min="0" max="100">
+
+    <label>Lab Work 1 (0–100)</label>
+    <input type="number" id="lab1" min="0" max="100">
+
+    <label>Lab Work 2 (0–100)</label>
+    <input type="number" id="lab2" min="0" max="100">
+
+    <label>Lab Work 3 (0–100)</label>
+    <input type="number" id="lab3" min="0" max="100">
+
+    <div class="button-group">
+        <button id="calculateBtn">Calculate</button>
+        <button id="clearBtn" class="clear-btn">Clear</button>
+    </div>
+</div>
+
+<!-- MODAL -->
+<div id="resultModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Prelim Grade Results</h2>
+        <div id="modalResults"></div>
+        <button id="clearBtn" class="clear-btn">Clear</button>
+    </div>
+</div>
+
+<script src="prelim.js"></script>
+</body>
+</html>
