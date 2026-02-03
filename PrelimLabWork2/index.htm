@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    
+    <div class="container">
+      <h1>League Attendance</h1>
+      <br>
+        <h2>Login</h2>
+
+        <form id="loginForm">
+            <div class="field">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+            </div>
+
+            <div class="field">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+
+            <button type="submit">Log In</button>
+        </form>
+
+        <button id="downloadButton" style="display: none;">Download Attendance</button>
+        <button id="riotDownloadButton" style="display: none;">Download Current History (Riot)</button> <!-- New button -->
+
+        <p id="message"></p>
+        <p id="timestamp"></p>
+    </div>
+
+    <div class="container2"></div>
+    <div class="container3"></div>
+    
+    <!-- Popup modal for messages -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p id="popupMessage"></p>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
