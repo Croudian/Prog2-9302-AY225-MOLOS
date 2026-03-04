@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prelim Grade Calculator</title>
+    <link rel="stylesheet" href="prelim.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="icon">📊</div>
+        <h1>Prelim Grade Calculator</h1>
+        <p class="subtitle">Calculate your required exam score</p>
+    </div>
+
+    <div class="form-card">
+        <div class="input-group">
+            <label for="attendance">
+                <span class="label-icon">✓</span>
+                Attendance Count
+            </label>
+            <div class="input-wrapper">
+                <input type="number" id="attendance" min="0" max="5" placeholder="0-5">
+                <span class="input-hint">out of 5</span>
+            </div>
+        </div>
+
+        <div class="lab-section">
+            <h3 class="section-title">Lab Work Scores</h3>
+            
+            <div class="input-group">
+                <label for="lab1">
+                    <span class="label-icon">📝</span>
+                    Lab Work 1
+                </label>
+                <div class="input-wrapper">
+                    <input type="number" id="lab1" min="0" max="100" placeholder="0-100">
+                    <span class="input-hint">%</span>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="lab2">
+                    <span class="label-icon">📝</span>
+                    Lab Work 2
+                </label>
+                <div class="input-wrapper">
+                    <input type="number" id="lab2" min="0" max="100" placeholder="0-100">
+                    <span class="input-hint">%</span>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="lab3">
+                    <span class="label-icon">📝</span>
+                    Lab Work 3
+                </label>
+                <div class="input-wrapper">
+                    <input type="number" id="lab3" min="0" max="100" placeholder="0-100">
+                    <span class="input-hint">%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button id="calculateBtn" class="btn btn-primary">
+                <span>Calculate Grade</span>
+            </button>
+            <button id="clearBtn" class="btn btn-secondary">
+                <span>Clear All</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL -->
+<div id="resultModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>📈 Grade Results</h2>
+        <div id="modalResults"></div>
+    </div>
+</div>
+
+<script src="prelim.js"></script>
+</body>
+</html>
